@@ -73,8 +73,8 @@ Run the Jupyter notebook sequentially to:
 
 ## Future Improvements
 this is just the beginning. I am not yet satisfied with the recall values and I'll be actively working to improve them.
-- Hyperparameter tuning using GridSearchCV
-- Addressing class imbalance with SMOTE or class weights
+- Hyperparameter tuning using GridSearchCV (next in line)
+- Addressing class imbalance with SMOTE or class weights (done)
 - Feature engineering (binning age, creating interaction terms)
 - Cross-validation for more robust evaluation
 - Ensemble methods combining multiple models
