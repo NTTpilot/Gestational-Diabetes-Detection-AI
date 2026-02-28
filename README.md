@@ -21,12 +21,12 @@ This project implements multiple machine learning models to predict the onset of
 1. **Logistic Regression** - Linear model for binary classification
 2. **Random Forest** - Ensemble of 300 decision trees
 3. **Support Vector Machine (SVM)** - RBF kernel for non-linear separation
-4. **K-Nearest Neighbors (KNN)** - Classification based on 7 nearest neighbors
+4. **K-Nearest Neighbors (KNN)** - Classification based on 5 nearest neighbors
 5. **XGBoost** - Gradient boosting with optimized hyperparameters
 
 ## Data Preprocessing
 
-- **Handling invalid zeros**: Features like Glucose, BloodPressure, SkinThickness, Insulin, and BMI cannot have zero values medically. These were replaced with NaN and imputed using column medians.
+- **Handling invalid zeros**: Features like Glucose, BloodPressure, SkinThickness, Insulin, and BMI cannot have zero values medically. These were replaced with column medians.
 - **Train-test split**: 70-30 split with stratification to maintain class proportions
 - **Feature scaling**: StandardScaler applied to normalize features (mean=0, std=1) for distance-based models
 
@@ -35,7 +35,7 @@ This project implements multiple machine learning models to predict the onset of
 - **Logistic Regression** achieved the highest ROC AUC score (0.851)
 - **Random Forest** achieved the highest accuracy (77.9%)
 - All models showed better precision for non-diabetic cases (class 0) than diabetic cases (class 1)
-- Glucose was identified as the most important feature in XGBoost
+- Glucose was identified as the most important feature in XGBoost. same as it is in real life
 
 ## Model Performance
 
@@ -57,7 +57,7 @@ This project implements multiple machine learning models to predict the onset of
 
 ## Sample Predictions
 
-The model can predict diabetes risk for new patient data. High glucose and BMI equates to a high chance of diabetes. Normal values and borderline profiles are considered normal (non-diabetic)
+The model can predict diabetes risk for new patient data. High glucose, age, and BMI equates to a high chance of diabetes. Normal values and borderline profiles are considered normal (non-diabetic)
 
 ## Project Structure
 
@@ -82,11 +82,10 @@ Run the Jupyter notebook sequentially to:
 
 ## Future Improvements
 
-this is just the beginning. I am not yet satisfied with the recall values and I'll be actively working to improve them.
+this is just the beginning. I am not yet satisfied with the recall values and I'll be actively working to improve them. I plan to incorporate the following:
 
-- Hyperparameter tuning using GridSearchCV (next in line)
-- Addressing class imbalance with SMOTE or class weights (done)
-- Feature engineering (binning age, creating interaction terms)
+- Hyperparameter tuning using GridSearchCV
+- Feature engineering (binning age, creating interaction terms, maybe more)
 - Cross-validation for more robust evaluation
 - Ensemble methods combining multiple models
-- Increasing training data size (currently less than 1000. Not optimal for a medical model at all.)
+- Increasing training data size (currently less than 768. Not optimal for a medical model.)
