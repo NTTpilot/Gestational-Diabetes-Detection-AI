@@ -32,20 +32,20 @@ This project implements multiple machine learning models to predict the onset of
 
 ## Key Findings
 
-- **Logistic Regression** achieved the highest ROC AUC score (0.851)
-- **Random Forest** achieved the highest accuracy (77.9%)
+- **Random Forest** achieved the highest ROC AUC score (0.844)
+- **XGBoost** achieved the highest accuracy (77.1%)
 - All models showed better precision for non-diabetic cases (class 0) than diabetic cases (class 1)
-- Glucose was identified as the most important feature in XGBoost. same as it is in real life
+- Glucose was identified as the most important feature in XGBoost, which aligns with real-world medical knowledge
 
 ## Model Performance
 
 | Model               | Accuracy | ROC AUC | Precision (0/1) | Recall (0/1) |
 | ------------------- | -------- | ------- | --------------- | ------------ |
-| Logistic Regression | 76.6%    | 0.851   | 0.80 / 0.68     | 0.85 / 0.62  |
-| Random Forest       | 77.9%    | 0.827   | 0.82 / 0.69     | 0.84 / 0.67  |
-| SVM (RBF)           | 74.4%    | 0.83    | 0.84 / 0.61     | 0.75 / 0.73  |
-| KNN                 | 71%      | 0.777   | 0.87 / 0.56     | 0.65 / 0.81  |
-| XGBoost             | 77%      | 0.847   | 0.89 / 0.63     | 0.73 / 0.84  |
+| Logistic Regression | 73.2%    | 0.841   | 0.90 / 0.58     | 0.66 / 0.86  |
+| Random Forest       | 75.3%    | 0.844   | 0.88 / 0.61     | 0.72 / 0.81  |
+| SVM (RBF)           | 73.6%    | 0.824   | 0.87 / 0.59     | 0.70 / 0.80  |
+| KNN                 | 71.0%    | 0.777   | 0.87 / 0.56     | 0.65 / 0.81  |
+| XGBoost             | 77.1%    | 0.837   | 0.89 / 0.63     | 0.73 / 0.84  |
 
 ## Technologies Used
 
