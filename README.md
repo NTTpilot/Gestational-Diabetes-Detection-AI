@@ -85,7 +85,5 @@ Run the Jupyter notebook sequentially to:
 this is just the beginning. I am not yet satisfied with the recall values and I'll be actively working to improve them. I plan to incorporate the following:
 
 - Hyperparameter tuning using GridSearchCV ---- (ongoing)
-- Feature engineering (binning age, creating interaction terms, maybe more)
-- Cross-validation for more robust evaluation
 - Ensemble methods combining multiple models
 - Increasing training data size (currently less than 768. Not optimal for a medical model.)
